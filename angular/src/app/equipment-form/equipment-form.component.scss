@@ -1,0 +1,34 @@
+:host {
+    width: 100%;
+
+    .box {
+        height: 100%;
+        width: 100%;
+        overflow: auto;
+    
+        display: flex;
+        flex-direction: column;
+    
+        .addForm {
+            height: 100%;
+            width: 100%;
+    
+            border-radius: 0.5rem;
+    
+            .full-width {
+                width: 93%;
+            }
+        
+            .half-width {
+                width: 45%;
+            }
+        }
+        
+        .addFormTitle {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 0.5em;
+            margin-bottom: 1.5em;
+        }
+    }
+}

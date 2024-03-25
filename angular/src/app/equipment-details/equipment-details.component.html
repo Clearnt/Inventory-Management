@@ -1,0 +1,55 @@
+<div class="box">
+    <table mat-table [dataSource]="dataSource" class="table">
+        <ng-container matColumnDef="select">
+            <th mat-header-cell *matHeaderCellDef class="header-cell header-cell-left"></th>
+            <td mat-cell *matCellDef="let row">
+                <mat-checkbox></mat-checkbox>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="typeId">
+            <th mat-header-cell *matHeaderCellDef class="header-cell">Type</th>
+            <td mat-cell *matCellDef="let element">{{element.typeId | equipmentType}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef class="header-cell">Name</th>
+            <td mat-cell *matCellDef="let element">{{element.name}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="accountingCode">
+            <th mat-header-cell *matHeaderCellDef class="header-cell">Code</th>
+            <td mat-cell *matCellDef="let element">{{element.accountingCode}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="purchaseDate">
+            <th mat-header-cell *matHeaderCellDef class="header-cell">Purchase date</th>
+            <td mat-cell *matCellDef="let element">{{element.purchaseDate | date:'dd.MM.yyyy' }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="cost">
+            <th mat-header-cell *matHeaderCellDef class="header-cell">Cost</th>
+            <td mat-cell *matCellDef="let element">{{element.cost}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="ownerEmployeeId">
+            <th mat-header-cell *matHeaderCellDef class="header-cell">Owner employee</th>
+            <td mat-cell *matCellDef="let element">{{element.ownerEmployeeId | employee}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="ownerDepartamentId">
+            <th mat-header-cell *matHeaderCellDef class="header-cell">Owner departament</th>
+            <td mat-cell *matCellDef="let element">{{element.ownerDepartamentId | departamet}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="stateId">
+            <th mat-header-cell *matHeaderCellDef class="header-cell header-cell-right">State</th>
+            <td mat-cell *matCellDef="let element">{{element.stateId | equipmentState}}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <!--<mat-paginator [pageSize]="10" showFirstLastButtons=true hidePageSize=true></mat-paginator>-->
+</div>

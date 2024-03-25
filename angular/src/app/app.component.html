@@ -1,0 +1,48 @@
+<mat-card class="container">
+  <mat-card-content>
+
+    <mat-card class="sidebar">
+      <mat-card-content class="no-pad-cont">
+        <mat-nav-list class="sidebar-list">
+          <mat-list-item [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" class="top">
+            <a [routerLink]="['/equipment']" matLine>Equipment</a>
+          </mat-list-item>
+    
+          <mat-list-item [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+            <a [routerLink]="['/employees']" matLine>Employees</a>
+          </mat-list-item>
+        </mat-nav-list>
+      </mat-card-content>
+    </mat-card>
+    
+    <mat-card class="content">
+      <mat-card-content class="no-pad-cont">
+        <router-outlet></router-outlet>
+      </mat-card-content>
+    </mat-card>
+    
+    <mat-toolbar class="header-toolbar">
+      <a [routerLink]="['/equipment/add']" matLine>   
+        <button mat-icon-button class="header-icon"> 
+          <mat-icon>add</mat-icon>
+        </button>     
+      </a>
+      <a [routerLink]="['/equipment/edit']" matLine>   
+        <button mat-icon-button class="header-icon"> 
+          <mat-icon>edit</mat-icon>
+        </button>     
+      </a>
+      <button mat-icon-button class="header-icon">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-toolbar>
+
+  </mat-card-content>
+</mat-card>
+
+<!--<div class="tab-bar">
+
+</div>
+<div class="content">
+  <app-equipment-details />
+</div>-->

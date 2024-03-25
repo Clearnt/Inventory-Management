@@ -1,0 +1,73 @@
+<div class="box">
+    <mat-card>
+        <mat-card-header class="addFormTitle">Add new equipment</mat-card-header>
+        <mat-card-content>
+            <form #addEquipmentForm="ngForm" (ngsubmit)="saveEquipment()" class="addForm">
+                <div class="form-group">
+                    <mat-form-field *ngIf = "equipmentTypesLoaded" class="half-width">
+                        <label>Type</label>
+                        <mat-select [(ngModel)]="newEquipment.typeId" name="type">
+                            @for (type of equipmentTypesList; track type) {
+                              <mat-option [value]="type.id">{{type.name}}</mat-option>
+                            }
+                        </mat-select>
+                    </mat-form-field>
+                    
+                    <mat-form-field style="margin-left: 1rem" class="half-width">
+                        <label>Name</label>
+                        <input matInput [(ngModel)]="newEquipment.name" name="name">
+                    </mat-form-field>
+                </div>
+
+                <div class="form-group">
+                    <mat-form-field class="half-width">
+                        <label>Purchase date</label>
+                        <input matInput [matDatepicker]="picker">
+                        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                    
+                    <mat-form-field style="margin-left: 1rem" class="half-width">
+                        <label>Cost</label>
+                        <input matInput [(ngModel)]="newEquipment.cost" name="cost">
+                    </mat-form-field>
+                </div>
+
+                <div class="form-group">
+                    <mat-form-field *ngIf = "employeesLoaded" class="half-width">
+                        <label>Owner employee</label>
+                        <mat-select [(ngModel)]="newEquipment.ownerEmployeeId" name="ownerEmployee">
+                            @for (emp of employeesList; track emp) {
+                              <mat-option [value]="emp.id">{{emp.name}}</mat-option>
+                            }
+                        </mat-select>
+                    </mat-form-field>
+                    
+                    <mat-form-field *ngIf = "departamentsLoaded" style="margin-left: 1rem" class="half-width">
+                        <label>Owner departament</label>
+                        <mat-select [(ngModel)]="newEquipment.ownerDepartamentId" name="ownerDepartament">
+                            @for (dep of departamentsList; track dep) {
+                              <mat-option [value]="dep.id">{{dep.name}}</mat-option>
+                            }
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+
+                <div class="form-group">
+                    <mat-form-field *ngIf = "equipmentStatesLoaded" class="full-width">
+                        <label>State</label>
+                        <mat-select [(ngModel)]="newEquipment.stateId" name="state">
+                            @for (state of equipmentStatesList; track state) {
+                              <mat-option [value]="state.id">{{state.name}}</mat-option>
+                            }
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+
+                <div class="form-group">
+                    <button mat-raised-button color="accent" (click)="saveEquipment()">Create</button>
+                </div>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EquipmentDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Addresses">
+    <Key>
+      <PropertyRef Name="address_id" />
+    </Key>
+    <Property Name="address_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="address" Type="nvarchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Departaments">
+    <Key>
+      <PropertyRef Name="departament_id" />
+    </Key>
+    <Property Name="departament_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="address_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Employees">
+    <Key>
+      <PropertyRef Name="employee_id" />
+    </Key>
+    <Property Name="employee_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="surname" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="position" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="departament_id" Type="int" Nullable="false" />
+    <Property Name="home_address" Type="nvarchar" MaxLength="200" />
+    <Property Name="phone_number" Type="nvarchar" MaxLength="50" />
+    <Property Name="email_address" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Equipment">
+    <Key>
+      <PropertyRef Name="equipment_id" />
+    </Key>
+    <Property Name="equipment_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="type_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EquipmentRecords">
+    <Key>
+      <PropertyRef Name="equipment_record_id" />
+    </Key>
+    <Property Name="equipment_record_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="equipment_id" Type="int" Nullable="false" />
+    <Property Name="accounting_code" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="purchase_date" Type="date" Nullable="false" />
+    <Property Name="cost" Type="money" Nullable="false" />
+    <Property Name="owner_employee_id" Type="int" />
+    <Property Name="owner_departament_id" Type="int" />
+    <Property Name="state_id" Type="int" Nullable="false" />
+    <Property Name="purchase_year" Type="int" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="EquipmentStates">
+    <Key>
+      <PropertyRef Name="state_id" />
+    </Key>
+    <Property Name="state_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EquipmentTypes">
+    <Key>
+      <PropertyRef Name="type_id" />
+    </Key>
+    <Property Name="type_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="parent_type_id" Type="int" />
+  </EntityType>
+  <Association Name="FK_Departaments_Addresses">
+    <End Role="Addresses" Type="Self.Addresses" Multiplicity="1" />
+    <End Role="Departaments" Type="Self.Departaments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Addresses">
+        <PropertyRef Name="address_id" />
+      </Principal>
+      <Dependent Role="Departaments">
+        <PropertyRef Name="address_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employees_Departaments">
+    <End Role="Departaments" Type="Self.Departaments" Multiplicity="1" />
+    <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departaments">
+        <PropertyRef Name="departament_id" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="departament_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Equipment_Equipment">
+    <End Role="EquipmentTypes" Type="Self.EquipmentTypes" Multiplicity="1" />
+    <End Role="Equipment" Type="Self.Equipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EquipmentTypes">
+        <PropertyRef Name="type_id" />
+      </Principal>
+      <Dependent Role="Equipment">
+        <PropertyRef Name="type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EquipmentRecords_Departaments">
+    <End Role="Departaments" Type="Self.Departaments" Multiplicity="0..1" />
+    <End Role="EquipmentRecords" Type="Self.EquipmentRecords" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departaments">
+        <PropertyRef Name="departament_id" />
+      </Principal>
+      <Dependent Role="EquipmentRecords">
+        <PropertyRef Name="owner_departament_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EquipmentRecords_Employees">
+    <End Role="Employees" Type="Self.Employees" Multiplicity="0..1" />
+    <End Role="EquipmentRecords" Type="Self.EquipmentRecords" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="employee_id" />
+      </Principal>
+      <Dependent Role="EquipmentRecords">
+        <PropertyRef Name="owner_employee_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EquipmentRecords_Equipment">
+    <End Role="Equipment" Type="Self.Equipment" Multiplicity="1" />
+    <End Role="EquipmentRecords" Type="Self.EquipmentRecords" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Equipment">
+        <PropertyRef Name="equipment_id" />
+      </Principal>
+      <Dependent Role="EquipmentRecords">
+        <PropertyRef Name="equipment_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EquipmentRecords_EquipmentStates">
+    <End Role="EquipmentStates" Type="Self.EquipmentStates" Multiplicity="1" />
+    <End Role="EquipmentRecords" Type="Self.EquipmentRecords" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EquipmentStates">
+        <PropertyRef Name="state_id" />
+      </Principal>
+      <Dependent Role="EquipmentRecords">
+        <PropertyRef Name="state_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EquipmentTypes_EquipmentTypes">
+    <End Role="EquipmentTypes" Type="Self.EquipmentTypes" Multiplicity="0..1" />
+    <End Role="EquipmentTypes1" Type="Self.EquipmentTypes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EquipmentTypes">
+        <PropertyRef Name="type_id" />
+      </Principal>
+      <Dependent Role="EquipmentTypes1">
+        <PropertyRef Name="parent_type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="EquipmentRecord_AccountingCode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+    <Parameter Name="EquipmentId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InventoryAuditItem_Index" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="Inventory_audit_id" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="EquipmentDBModelStoreContainer">
+    <EntitySet Name="Addresses" EntityType="Self.Addresses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Departaments" EntityType="Self.Departaments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Equipment" EntityType="Self.Equipment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EquipmentRecords" EntityType="Self.EquipmentRecords" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EquipmentStates" EntityType="Self.EquipmentStates" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EquipmentTypes" EntityType="Self.EquipmentTypes" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Departaments_Addresses" Association="Self.FK_Departaments_Addresses">
+      <End Role="Addresses" EntitySet="Addresses" />
+      <End Role="Departaments" EntitySet="Departaments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employees_Departaments" Association="Self.FK_Employees_Departaments">
+      <End Role="Departaments" EntitySet="Departaments" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Equipment_Equipment" Association="Self.FK_Equipment_Equipment">
+      <End Role="EquipmentTypes" EntitySet="EquipmentTypes" />
+      <End Role="Equipment" EntitySet="Equipment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EquipmentRecords_Departaments" Association="Self.FK_EquipmentRecords_Departaments">
+      <End Role="Departaments" EntitySet="Departaments" />
+      <End Role="EquipmentRecords" EntitySet="EquipmentRecords" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EquipmentRecords_Employees" Association="Self.FK_EquipmentRecords_Employees">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="EquipmentRecords" EntitySet="EquipmentRecords" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EquipmentRecords_Equipment" Association="Self.FK_EquipmentRecords_Equipment">
+      <End Role="Equipment" EntitySet="Equipment" />
+      <End Role="EquipmentRecords" EntitySet="EquipmentRecords" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EquipmentRecords_EquipmentStates" Association="Self.FK_EquipmentRecords_EquipmentStates">
+      <End Role="EquipmentStates" EntitySet="EquipmentStates" />
+      <End Role="EquipmentRecords" EntitySet="EquipmentRecords" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EquipmentTypes_EquipmentTypes" Association="Self.FK_EquipmentTypes_EquipmentTypes">
+      <End Role="EquipmentTypes" EntitySet="EquipmentTypes" />
+      <End Role="EquipmentTypes1" EntitySet="EquipmentTypes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

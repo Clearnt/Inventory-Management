@@ -1,0 +1,89 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Univ\\5sem\\\u041A\u041F\u0417\\project\\api\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{578F64E8-0552-4F51-85FF-7D2C1D182ADB}|CodeFirst\\CodeFirst.csproj|d:\\univ\\5sem\\\u043A\u043F\u0437\\project\\api\\codefirst\\equipmentdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{578F64E8-0552-4F51-85FF-7D2C1D182ADB}|CodeFirst\\CodeFirst.csproj|solutionrelative:codefirst\\equipmentdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{578F64E8-0552-4F51-85FF-7D2C1D182ADB}|CodeFirst\\CodeFirst.csproj|d:\\univ\\5sem\\\u043A\u043F\u0437\\project\\api\\codefirst\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{578F64E8-0552-4F51-85FF-7D2C1D182ADB}|CodeFirst\\CodeFirst.csproj|solutionrelative:codefirst\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{894770EA-6A5A-4A82-8660-CB6533C48C3A}|API\\API.csproj|d:\\univ\\5sem\\\u043A\u043F\u0437\\project\\api\\api\\dtos\\employeedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{894770EA-6A5A-4A82-8660-CB6533C48C3A}|API\\API.csproj|solutionrelative:api\\dtos\\employeedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{894770EA-6A5A-4A82-8660-CB6533C48C3A}|API\\API.csproj|d:\\univ\\5sem\\\u043A\u043F\u0437\\project\\api\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{894770EA-6A5A-4A82-8660-CB6533C48C3A}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{34c7837f-3b3a-449c-bdf0-bdad86cbaf4a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EquipmentDBContext.cs",
+              "DocumentMoniker": "D:\\Univ\\5sem\\\u041A\u041F\u0417\\project\\api\\CodeFirst\\EquipmentDBContext.cs",
+              "RelativeDocumentMoniker": "CodeFirst\\EquipmentDBContext.cs",
+              "ToolTip": "D:\\Univ\\5sem\\\u041A\u041F\u0417\\project\\api\\CodeFirst\\EquipmentDBContext.cs",
+              "RelativeToolTip": "CodeFirst\\EquipmentDBContext.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAADwv0cAAABWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T23:16:46.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmployeeDTO.cs",
+              "DocumentMoniker": "D:\\Univ\\5sem\\\u041A\u041F\u0417\\project\\api\\API\\DTOs\\EmployeeDTO.cs",
+              "RelativeDocumentMoniker": "API\\DTOs\\EmployeeDTO.cs",
+              "ToolTip": "D:\\Univ\\5sem\\\u041A\u041F\u0417\\project\\api\\API\\DTOs\\EmployeeDTO.cs",
+              "RelativeToolTip": "API\\DTOs\\EmployeeDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T23:16:46.588Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "D:\\Univ\\5sem\\\u041A\u041F\u0417\\project\\api\\CodeFirst\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "CodeFirst\\Models\\Employee.cs",
+              "ToolTip": "D:\\Univ\\5sem\\\u041A\u041F\u0417\\project\\api\\CodeFirst\\Models\\Employee.cs",
+              "RelativeToolTip": "CodeFirst\\Models\\Employee.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T23:16:46.592Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Univ\\5sem\\\u041A\u041F\u0417\\project\\api\\API\\Program.cs",
+              "RelativeDocumentMoniker": "API\\Program.cs",
+              "ToolTip": "D:\\Univ\\5sem\\\u041A\u041F\u0417\\project\\api\\API\\Program.cs",
+              "RelativeToolTip": "API\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T23:16:46.595Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

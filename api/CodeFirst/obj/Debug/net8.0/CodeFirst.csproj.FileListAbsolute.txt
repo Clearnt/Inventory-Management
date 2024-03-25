@@ -1,0 +1,14 @@
+C:\Users\111\Desktop\Univ\5sem\КПЗ\labs\lab3\Lab3-4\CodeFirst\bin\Debug\net8.0\CodeFirst.deps.json
+C:\Users\111\Desktop\Univ\5sem\КПЗ\labs\lab3\Lab3-4\CodeFirst\bin\Debug\net8.0\CodeFirst.runtimeconfig.json
+C:\Users\111\Desktop\Univ\5sem\КПЗ\labs\lab3\Lab3-4\CodeFirst\bin\Debug\net8.0\CodeFirst.dll
+C:\Users\111\Desktop\Univ\5sem\КПЗ\labs\lab3\Lab3-4\CodeFirst\bin\Debug\net8.0\CodeFirst.pdb
+C:\Users\111\Desktop\Univ\5sem\КПЗ\labs\lab3\Lab3-4\CodeFirst\obj\Debug\net8.0\CodeFirst.csproj.AssemblyReference.cache
+C:\Users\111\Desktop\Univ\5sem\КПЗ\labs\lab3\Lab3-4\CodeFirst\obj\Debug\net8.0\CodeFirst.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\111\Desktop\Univ\5sem\КПЗ\labs\lab3\Lab3-4\CodeFirst\obj\Debug\net8.0\CodeFirst.AssemblyInfoInputs.cache
+C:\Users\111\Desktop\Univ\5sem\КПЗ\labs\lab3\Lab3-4\CodeFirst\obj\Debug\net8.0\CodeFirst.AssemblyInfo.cs
+C:\Users\111\Desktop\Univ\5sem\КПЗ\labs\lab3\Lab3-4\CodeFirst\obj\Debug\net8.0\CodeFirst.csproj.CoreCompileInputs.cache
+C:\Users\111\Desktop\Univ\5sem\КПЗ\labs\lab3\Lab3-4\CodeFirst\obj\Debug\net8.0\CodeFirst.dll
+C:\Users\111\Desktop\Univ\5sem\КПЗ\labs\lab3\Lab3-4\CodeFirst\obj\Debug\net8.0\refint\CodeFirst.dll
+C:\Users\111\Desktop\Univ\5sem\КПЗ\labs\lab3\Lab3-4\CodeFirst\obj\Debug\net8.0\CodeFirst.pdb
+C:\Users\111\Desktop\Univ\5sem\КПЗ\labs\lab3\Lab3-4\CodeFirst\obj\Debug\net8.0\CodeFirst.genruntimeconfig.cache
+C:\Users\111\Desktop\Univ\5sem\КПЗ\labs\lab3\Lab3-4\CodeFirst\obj\Debug\net8.0\ref\CodeFirst.dll

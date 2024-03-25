@@ -1,0 +1,111 @@
+@use '@angular/material' as mat;
+@use './container-theme' as container;
+
+@include mat.core();
+
+$dark-primary-text: rgba(black, 0.87);
+$light-primary-text: white;
+
+$my-green-palette: (
+  50: #E4EDE2,
+  100: #C7DAC2,
+  200: #AAC7A2,
+  300: #8DB482,
+  400: #70A162,
+  500: #628e55,
+  600: #567d4b,
+  700: #496b40,
+  800: #405d37,
+  900: #354e2e,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $dark-primary-text,
+    A400: $dark-primary-text,
+    A700: $dark-primary-text,
+  )
+);
+
+$my-blue-palette: (
+  50: #e2e4ed,
+  100: #C3C7D9,
+  200: #A4AAC5,
+  300: #828DB4,
+  400: #6270A1,
+  500: #55628E,
+  600: #4B567D,
+  700: #40496B,
+  800: #37405D,
+  900: #2E354E,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $dark-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $dark-primary-text,
+    A400: $dark-primary-text,
+    A700: $dark-primary-text,
+  )
+);
+
+$my-red-palette: (
+    50: #EDE2E4,
+    100: #D9C3C7,
+    200: #C5A4AA,
+    300: #B4828D,
+    400: #A16270,
+    500: #8E5562,
+    600: #7D4B56,
+    700: #6B4049,
+    800: #5D3740,
+    900: #4E2E35,
+    contrast: (
+      50: $dark-primary-text,
+      100: $dark-primary-text,
+      200: $dark-primary-text,
+      300: $dark-primary-text,
+      400: $dark-primary-text,
+      500: $dark-primary-text,
+      600: $light-primary-text,
+      700: $light-primary-text,
+      800: $light-primary-text,
+      900: $light-primary-text,
+      A100: $dark-primary-text,
+      A200: $dark-primary-text,
+      A400: $dark-primary-text,
+      A700: $dark-primary-text,
+    )
+);
+
+$my-primary: mat.define-palette($my-blue-palette, 50, 100, 200);
+$my-accent: mat.define-palette($my-green-palette, 500, 50);
+$my-warn: mat.define-palette($my-red-palette);
+
+$my-theme: mat.define-light-theme((
+ color: (
+   primary: $my-primary,
+   accent: $my-accent,
+   warn: $my-warn,
+ ),
+ typography: mat.define-typography-config(),
+ density: 0,
+));
+
+@include mat.all-component-themes($my-theme);
+@include container.theme($my-theme);
