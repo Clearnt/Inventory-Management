@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EquipmentDBModelStoreContainer" CdmEntityContainer="EquipmentDBEntities">
+    <EntitySetMapping Name="Addresses">
+      <EntityTypeMapping TypeName="EquipmentDBModel.Addresses">
+        <MappingFragment StoreEntitySet="Addresses">
+          <ScalarProperty Name="address_id" ColumnName="address_id" />
+          <ScalarProperty Name="address" ColumnName="address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departaments">
+      <EntityTypeMapping TypeName="EquipmentDBModel.Departaments">
+        <MappingFragment StoreEntitySet="Departaments">
+          <ScalarProperty Name="departament_id" ColumnName="departament_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="address_id" ColumnName="address_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="EquipmentDBModel.Employees">
+        <MappingFragment StoreEntitySet="Employees">
+          <ScalarProperty Name="employee_id" ColumnName="employee_id" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="departament_id" ColumnName="departament_id" />
+          <ScalarProperty Name="home_address" ColumnName="home_address" />
+          <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+          <ScalarProperty Name="email_address" ColumnName="email_address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Equipment">
+      <EntityTypeMapping TypeName="EquipmentDBModel.Equipment">
+        <MappingFragment StoreEntitySet="Equipment">
+          <ScalarProperty Name="equipment_id" ColumnName="equipment_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="type_id" ColumnName="type_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EquipmentRecords">
+      <EntityTypeMapping TypeName="EquipmentDBModel.EquipmentRecords">
+        <MappingFragment StoreEntitySet="EquipmentRecords">
+          <ScalarProperty Name="equipment_record_id" ColumnName="equipment_record_id" />
+          <ScalarProperty Name="equipment_id" ColumnName="equipment_id" />
+          <ScalarProperty Name="accounting_code" ColumnName="accounting_code" />
+          <ScalarProperty Name="purchase_date" ColumnName="purchase_date" />
+          <ScalarProperty Name="cost" ColumnName="cost" />
+          <ScalarProperty Name="owner_employee_id" ColumnName="owner_employee_id" />
+          <ScalarProperty Name="owner_departament_id" ColumnName="owner_departament_id" />
+          <ScalarProperty Name="state_id" ColumnName="state_id" />
+          <ScalarProperty Name="purchase_year" ColumnName="purchase_year" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EquipmentStates">
+      <EntityTypeMapping TypeName="EquipmentDBModel.EquipmentStates">
+        <MappingFragment StoreEntitySet="EquipmentStates">
+          <ScalarProperty Name="state_id" ColumnName="state_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EquipmentTypes">
+      <EntityTypeMapping TypeName="EquipmentDBModel.EquipmentTypes">
+        <MappingFragment StoreEntitySet="EquipmentTypes">
+          <ScalarProperty Name="type_id" ColumnName="type_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="parent_type_id" ColumnName="parent_type_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

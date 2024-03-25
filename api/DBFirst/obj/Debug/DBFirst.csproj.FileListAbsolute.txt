@@ -1,0 +1,12 @@
+C:\Users\111\Desktop\Univ\5sem\КПЗ\labs\lab3\Lab3-4\DBFirst\bin\Debug\DBFirst.dll.config
+C:\Users\111\Desktop\Univ\5sem\КПЗ\labs\lab3\Lab3-4\DBFirst\bin\Debug\DBFirst.dll
+C:\Users\111\Desktop\Univ\5sem\КПЗ\labs\lab3\Lab3-4\DBFirst\bin\Debug\DBFirst.pdb
+C:\Users\111\Desktop\Univ\5sem\КПЗ\labs\lab3\Lab3-4\DBFirst\bin\Debug\EntityFramework.dll
+C:\Users\111\Desktop\Univ\5sem\КПЗ\labs\lab3\Lab3-4\DBFirst\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\111\Desktop\Univ\5sem\КПЗ\labs\lab3\Lab3-4\DBFirst\bin\Debug\EntityFramework.xml
+C:\Users\111\Desktop\Univ\5sem\КПЗ\labs\lab3\Lab3-4\DBFirst\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\111\Desktop\Univ\5sem\КПЗ\labs\lab3\Lab3-4\DBFirst\obj\Debug\DBFirst.csproj.AssemblyReference.cache
+C:\Users\111\Desktop\Univ\5sem\КПЗ\labs\lab3\Lab3-4\DBFirst\obj\Debug\DBFirst.csproj.CoreCompileInputs.cache
+C:\Users\111\Desktop\Univ\5sem\КПЗ\labs\lab3\Lab3-4\DBFirst\obj\Debug\DBFirst.csproj.CopyComplete
+C:\Users\111\Desktop\Univ\5sem\КПЗ\labs\lab3\Lab3-4\DBFirst\obj\Debug\DBFirst.dll
+C:\Users\111\Desktop\Univ\5sem\КПЗ\labs\lab3\Lab3-4\DBFirst\obj\Debug\DBFirst.pdb
